@@ -6,7 +6,9 @@ const jwt = require('jsonwebtoken');
 const validateRegisterInput = require('../validation/register');
 const validateLoginInput = require('../validation/login');
 
+
 exports.register = (req, res) => {
+  console.log('in register');
   const { errors, isValid } = validateRegisterInput(req.body);
 
   if(!isValid) {
